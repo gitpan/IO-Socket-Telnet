@@ -22,3 +22,4 @@ t/011-dont.t
 t/012-will.t
 t/013-wont.t
 t/020-subnegotiation.t
+t/030-callback.t

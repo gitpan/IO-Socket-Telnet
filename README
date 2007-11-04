@@ -1,4 +1,4 @@
-IO-Socket-Telnet 0.01
+IO-Socket-Telnet 0.02
 
 Telnet is a simple protocol that sits on top of TCP/IP. It handles the
 negotiation of various options, both about the connection itself (ECHO)
@@ -16,6 +16,7 @@ know if you need particular things implemented. Failing test cases are the
 best bug reports!
 
 MAJOR CHANGES
+    0.02: negotiation gets better hooks, default port 23
     0.01: first version
 
 INSTALLATION

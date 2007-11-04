@@ -1,5 +1,5 @@
 --- 
-abstract: Transparent telnet negotiation for IO::Socket::INET
+abstract: transparent telnet negotiation for IO::Socket::INET
 author: Shawn M Moore, C<< <sartak at gmail.com> >>
 build_requires: 
   Test::More: 0
@@ -18,4 +18,4 @@ requires:
   Class::Method::Modifiers: 0
   IO::Socket::INET: 0
   parent: 0
-version: 0.01
+version: 0.02
