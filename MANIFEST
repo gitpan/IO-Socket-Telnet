@@ -1,11 +1,8 @@
 Changes
-inc/Module/AutoInstall.pm
 inc/Module/Install.pm
-inc/Module/Install/AutoInstall.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
-inc/Module/Install/Include.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
 inc/Module/Install/Win32.pm
@@ -22,4 +19,5 @@ t/011-dont.t
 t/012-will.t
 t/013-wont.t
 t/020-subnegotiation.t
-t/030-callback.t
+t/030-simple-callback.t
+t/031-complex-callback.t
