@@ -1,4 +1,3 @@
-#!perl -T
 use strict;
 use warnings;
 use Test::More tests => 3;
@@ -7,8 +6,7 @@ use IO::Socket::Telnet;
 my @sent;
 {
     no warnings 'once';
-    *IO::Socket::Telnet::send = sub
-    {
+    *IO::Socket::Telnet::send = sub {
         my ($self, $text) = @_;
         push @sent, $text;
     };

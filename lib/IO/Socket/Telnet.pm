@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use base 'IO::Socket::INET';
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub new {
     my $class = shift;
@@ -92,8 +92,7 @@ sub do {
     $self->send($IAC . $DO . $opt);
 }
 
-sub dont
-{
+sub dont {
     my ($self, $opt) = @_;
     if (exists $options{$opt}) {
         $opt = $options{$opt};
@@ -255,8 +254,7 @@ sub _telnet_simple_callback {
     $self->send($response);
 }
 
-sub _reasonable_response
-{
+sub _reasonable_response {
     my ($self, $mode, $opt) = @_;
 
        if ($mode eq $DO)   { return "$IAC$WONT$opt" }
@@ -272,6 +270,8 @@ sub _telnet_complex_callback {
     ${*$self}{telnet_complex_cb} or return;
     ${*$self}{telnet_complex_cb}->($self, $sb);
 }
+
+1;
 
 __END__
 
@@ -313,7 +313,9 @@ callbacks and by initiating it yourself.
 
 =head2 PASSIVE NEGOTATION
 
-There are two types of callback: one for the simple IAC <DO|DONT|WILL|WONT> <option> negotiation, and the other for the more complicated IAC SB <stuff> IAC SE.
+There are two types of callback: one for the simple IAC <DO|DONT|WILL|WONT>
+<option> negotiation, and the other for the more complicated IAC SB <stuff> IAC
+SE.
 
 =head3 SIMPLE CALLBACK
 
